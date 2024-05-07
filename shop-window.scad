@@ -41,4 +41,4 @@ module window_bars() {
 }
 
 wall();
-window_bars();
+//window_bars();

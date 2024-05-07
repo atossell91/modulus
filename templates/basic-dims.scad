@@ -1,7 +1,7 @@
 unit = 1000;
 
-section_width = unit * 1.5;
-section_height = unit * 2.5;
+section_width = unit;
+section_height = unit * 2;
 section_thickness = unit * 0.1;
 
 rt = sqrt(2);
