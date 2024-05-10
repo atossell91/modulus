@@ -1,14 +1,14 @@
 include <./basic-dims.scad>
 
-door_width = section_width * 0.8;
-door_height = section_height * 0.75;
+simple_door_door_width = section_width * 0.8;
+simple_door_door_height = section_height * 0.75;
 
 module door_piece_sketch() {
     difference() {
         square([section_width, section_height]);
 
-        translate([section_width/2 - door_width/2, 0, 0])
-        square([door_width, door_height]);
+        translate([section_width/2 - simple_door_door_width/2, 0, 0])
+        square([simple_door_door_width, simple_door_door_height]);
     }   
 }
 

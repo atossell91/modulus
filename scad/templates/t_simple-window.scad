@@ -1,18 +1,18 @@
-include <../templates/basic-dims.scad>
+include <./basic-dims.scad>
 
-window_width = 0.6 * section_width;
-window_height = 0.4 * section_height;
-bottom_offset = 0.4 * section_height;
+simple_window_width = 0.6 * section_width;
+simple_window_height = 0.4 * section_height;
+simple_window_bottom_offset = 0.4 * section_height;
 
 module simple_window_sketch() {
     difference() {
         square([section_width, section_height]);
 
         translate([
-            section_width/2 - window_width/2,
-            bottom_offset,
+            section_width/2 - simple_window_width/2,
+            simple_window_bottom_offset,
             0])
-        square([window_width, window_height]);
+        square([simple_window_width, simple_window_height]);
     }
 }
 
