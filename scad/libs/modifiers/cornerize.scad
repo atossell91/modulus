@@ -13,7 +13,7 @@ module cornerize_trim(amount, height = section_height) {
 //  Child 0 is front
 //  Child 1 is side
 module cornerize(front_width = section_width, front_thickness = section_thickness,
-    side_width = section_width, side_thickness = section_thickness) {
+    side_width = section_width, side_thickness = section_thickness, height=section_height) {
     
     new_front_size = front_width - side_thickness/2;
     front_scale_amt = new_front_size / front_width;
@@ -31,5 +31,5 @@ module cornerize(front_width = section_width, front_thickness = section_thicknes
     children(1);
 
     translate([-front_thickness/2, -side_thickness/2, 0])
-    cube([front_thickness, side_thickness, section_height]);
+    cube([front_thickness, side_thickness, height]);
 }
