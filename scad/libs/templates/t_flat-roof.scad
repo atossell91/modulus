@@ -1,4 +1,4 @@
-include <./basic-dims.scad>
+include <../basic-dims.scad>
 
 flat_roof_wall_offset = section_thickness/2;
 

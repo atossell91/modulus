@@ -1,5 +1,5 @@
-include <./basic-dims.scad>
-include <./t_simple-window.scad>
+include <../basic-dims.scad>
+include <./t_window.scad>
 
 window_frame_frame_thickness = unit / 20;
 window_frame_frame_depth = section_thickness + window_frame_frame_thickness;

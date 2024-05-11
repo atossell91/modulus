@@ -1,5 +1,5 @@
-include <./basic-dims.scad>
-include <./t_simple-door.scad>
+include <../basic-dims.scad>
+include <./t_door.scad>
 
 door_frame_frame_thickness = unit / 20;
 door_frame_frame_depth = section_thickness + unit/20;
@@ -23,6 +23,3 @@ module door_frame() {
     linear_extrude(door_frame_frame_depth)
     door_frame_sketch();
 }
-
-//door_piece();
-//door_frame();

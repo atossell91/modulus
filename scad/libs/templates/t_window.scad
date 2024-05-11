@@ -1,4 +1,4 @@
-include <./basic-dims.scad>
+include <../basic-dims.scad>
 
 simple_window_width = 0.6 * section_width;
 simple_window_height = 0.4 * section_height;
@@ -16,7 +16,7 @@ module simple_window_sketch() {
     }
 }
 
-module simple_window() {
+module window() {
     rotate([90, 0, 90])
     translate([0, 0, -section_thickness/2])
     linear_extrude(section_thickness)

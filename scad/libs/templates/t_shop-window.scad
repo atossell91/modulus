@@ -1,4 +1,4 @@
-include <./basic-dims.scad>
+include <../basic-dims.scad>
 include <../modifiers/diagonalize.scad>
 
 shop_window_total_width = section_width * 2;
@@ -13,7 +13,7 @@ bar_x_offset = shop_window_window_padding;
 shop_window_num_bars = 8;
 shop_window_bar_gap = shop_window_width/(shop_window_num_bars + 1);
 
-module wall_sketch() {
+module shop_window_sketch() {
 
     difference() {
         square([shop_window_total_width, section_height]);
@@ -27,10 +27,10 @@ module shop_window() {
     rotate([90, 0, 90])
     translate([0, 0, -section_thickness/2])
     linear_extrude(section_thickness)
-    wall_sketch();
+    shop_window_sketch();
 }
 
-module window_bars() {
+module shop_window_bars() {
     rotate([90, 0, 90])
     for (i = [1 : shop_window_num_bars]) {
         translate([0, 0, -section_thickness/2])

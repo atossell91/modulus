@@ -1,4 +1,4 @@
-include <../templates/basic-dims.scad>
+include <../basic-dims.scad>
 
 module diagonalize_triangle_sketch(t = section_thickness) {
     x = sin(45) * t;

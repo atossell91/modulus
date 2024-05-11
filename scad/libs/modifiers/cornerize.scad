@@ -1,4 +1,4 @@
-include <../templates/basic-dims.scad>
+include <../basic-dims.scad>
 
 trim_depth = 10000;
 

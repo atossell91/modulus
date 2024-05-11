@@ -1,9 +1,9 @@
-include <./basic-dims.scad>
+include <../basic-dims.scad>
 
 simple_door_door_width = section_width * 0.8;
 simple_door_door_height = section_height * 0.75;
 
-module door_piece_sketch() {
+module door_sketch() {
     difference() {
         square([section_width, section_height]);
 
@@ -12,9 +12,9 @@ module door_piece_sketch() {
     }   
 }
 
-module door_piece() {
+module door() {
     rotate([90, 0, 90])
     translate([0, 0, -section_thickness/2])
     linear_extrude(section_thickness)
-    door_piece_sketch();
+    door_sketch();
 }

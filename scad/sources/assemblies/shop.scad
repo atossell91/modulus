@@ -1,83 +1,82 @@
-include <../templates/basic-dims.scad>
-include <../templates/t_simple-segment.scad>
-include <../templates/t_simple-wall-corner.scad>
-include <../templates/t_simple-door.scad>
-include <../templates/t_shop-window.scad>
-include <../templates/t_flat-roof.scad>
-include <../templates/t_simple-window.scad>
-include <../templates/t_door-frame.scad>
-include <../templates/t_window-frame.scad>
+include <../../libs/basic-dims.scad>
+include <../../libs/templates/t_wall.scad>
+include <../../libs/templates/t_door.scad>
+include <../../libs/templates/t_shop-window.scad>
+include <../../libs/templates/t_flat-roof.scad>
+include <../../libs/templates/t_window.scad>
+include <../../libs/templates/t_door-frame.scad>
+include <../../libs/templates/t_window-frame.scad>
 
 module wall_with_lwindow() {
-    simple_wall_corner();
+    wall_corner();
 
     translate([0, section_width, 0]) {
-        door_piece();
+        door();
         door_frame();
     }
 
     translate([0, section_width*2, 0]) {
         shop_window();
-        window_bars();
+        shop_window_bars();
     }
 
 
     translate([0, section_width*4, 0])
-    simple_wall();
+    wall();
 
     translate([0, section_width*5, 0])
     rotate([0, 0, 90])
-    simple_wall_corner();
+    wall_corner();
 }
 
 module wall_with_offset_door() {
 
-    simple_wall_corner();
+    wall_corner();
 
     translate([0, section_width*5, 0])
     rotate([0, 0, 90])
-    simple_wall_corner();
+    wall_corner();
 
     translate([0, section_width, 0]) {
-        door_piece();
+        door();
         door_frame();
     }
 
     for (i = [1 : 2]) {
         translate([0, section_width + section_width*i, 0])
-        simple_wall();
+        wall();
     }
 }
 
 module wall_solid_no_corner() {
     for (i = [1 : 3]) {
         translate([0, section_width*i, 0])
-        simple_wall();
+        wall();
     }
 }
 
 module wall_solid_with_corner() {
-    simple_wall_corner();
+    wall_corner();
 
     for (i = [1 : 3]) {
         translate([0, section_width*i, 0])
-        simple_wall();
+        wall();
     }
 }
 
 module wall_with_two_windows() {
-    simple_wall_corner();
+    wall_corner();
 
     translate([0, section_width*1, 0]) {
-        simple_window();
+        window();
         window_frame();
     }
 
     translate([0, section_width*2, 0])
-    simple_wall();
+    wall();
 
     translate([0, section_width*3, 0]) {
-        simple_window();
+        window();
         window_frame();
     }
 }
