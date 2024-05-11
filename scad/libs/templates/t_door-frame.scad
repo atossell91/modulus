@@ -23,3 +23,14 @@ module door_frame() {
     linear_extrude(door_frame_frame_depth)
     door_frame_sketch();
 }
+
+module door_frame_offset() {
+    translate([0, 0, 0])
+    translate([-door_frame_frame_depth/2, 0, 0])
+    rotate([90, 0, 90])
+    linear_extrude(door_frame_frame_depth)
+    door_frame_sketch();
+}
+
+%door_frame_offset();
+door_offset();
