@@ -31,6 +31,3 @@ module door_frame_offset() {
     linear_extrude(door_frame_frame_depth)
     door_frame_sketch();
 }
-
-%door_frame_offset();
-door_offset();
