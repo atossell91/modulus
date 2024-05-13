@@ -39,14 +39,14 @@ module roof() {
         floor();
     }
 
-    for (i = [1: 6]) {
+    for (i = [1: 5]) {
         translate([0, section_width*i, 0]) {
             box_roof_straight();
             floor();
         }
     }
 
-    translate([0, section_width*7, 0]) {
+    translate([0, section_width*5, 0]) {
         translate([0, section_width, 0])
         rotate([0, 0, 90])
         box_roof_corner();
@@ -54,9 +54,9 @@ module roof() {
     }
 }
 
-color([0.6, 0.3, 0.0])
+color([0.8, 0.8, 0.8])
 front();
 
 color([1.0, 0.8, 0.6])
-translate([section_width*0, -section_width, section_height])
+translate([section_width*0, -section_width*0, section_height])
 roof();
